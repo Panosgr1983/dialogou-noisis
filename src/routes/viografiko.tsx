@@ -347,8 +347,20 @@ function CredGroup({ eyebrow, items }: { eyebrow: string; items: Credential[] })
 function ViografikoPage() {
   return (
     <>
-      <section className="relative overflow-hidden bg-secondary/40">
-        <div className="mx-auto max-w-6xl px-4 py-16 md:px-8 md:py-24">
+      <section className="relative overflow-hidden">
+        {/* Φωτογραφία φόντου — το filter κρατά ευανάγνωστα breadcrumb & τίτλο */}
+        <img
+          src={portrait}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 h-full w-full object-cover object-[center_32%]"
+          loading="eager"
+        />
+        <div
+          aria-hidden
+          className="absolute inset-0 bg-gradient-to-r from-background via-background/88 to-background/35"
+        />
+        <div className="relative z-10 mx-auto max-w-6xl px-4 py-16 md:px-8 md:py-24">
           <div>
             <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">
               Βιογραφικό
@@ -360,18 +372,6 @@ function ViografikoPage() {
               Κοινωνική Ψυχολόγος · Παιδοψυχολόγος · Σύμβουλος Συνθετικής Συμβουλευτικής · Επόπτρια
             </p>
           </div>
-        </div>
-      </section>
-
-      {/* Μικρή φωτογραφία σε όλο το πλάτος */}
-      <section className="bg-background">
-        <div className="relative h-48 w-full overflow-hidden sm:h-56 md:h-64">
-          <img
-            src={portrait}
-            alt="Ευδοκία Τίντζη-Σαββιδάκη"
-            className="h-full w-full object-cover object-[center_30%]"
-            loading="lazy"
-          />
         </div>
       </section>
 
