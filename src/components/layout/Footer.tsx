@@ -128,6 +128,17 @@ export function Footer() {
           <p>
             © {new Date().getFullYear()} {SITE.name}. Με επιφύλαξη παντός δικαιώματος.
           </p>
+          <p>
+            Κατασκευή ιστοσελίδας:{" "}
+            <a
+              href="https://aionweb.gr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-foreground/70 underline decoration-border underline-offset-4 transition-colors hover:text-primary"
+            >
+              AION Web Solutions ↗
+            </a>
+          </p>
         </div>
       </div>
     </footer>
