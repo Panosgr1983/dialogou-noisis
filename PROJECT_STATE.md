@@ -247,3 +247,41 @@ Live checks:
   `thought-path-pro` → `dialogou-noisis` (GitHub) και `thought-path-pro-main` → `dialogou-noisis`
   (Vercel). Archive όλων των παλιών εκδόσεων σε GitHub (read-only) και Vercel (`archive-*`).
   Προσθήκη domain `dialogou-noisis.vercel.app`. Μετονομασία τοπικών φακέλων. Δημιουργία αυτής της αναφοράς.
+
+---
+
+## 9. Ενημέρωση 2026-11-14 (από Jarvis) — τι βρήκα στην πράξη
+
+### 9.1 Το push ΔΕΝ κάνει deploy
+Το Vercel project **δεν είναι συνδεδεμένο με Git**. Το τελευταίο production deployment
+πριν από σήμερα ήταν το `dpl_2AxZ5GM2…` (2026-09-09). Άρα:
+
+- `git push origin main` → **κανένα** deploy.
+- Χρειάζεται `vercel deploy --prod` ή ενεργοποίηση `vercel git connect`.
+
+### 9.2 Το CLI deploy αυτή τη στιγμή βγαίνει 404
+Δοκιμάστηκε `vercel deploy --prod` με το τρέχον repo (TanStack Start 1.168.60):
+
+- Το build ολοκληρώνεται («Build Completed in /vercel/output»), το deployment γίνεται READY,
+  αλλά **όλες οι διαδρομές επιστρέφουν 404** (`x-vercel-error: NOT_FOUND`, body 79 bytes).
+- Άρα το output δεν παράγει σωστό routing config για το framework preset `tanstack-start`.
+- **Έγινε rollback** στο `dpl_2AxZ5GM2…` — το site είναι ξανά ζωντανό (200).
+
+**Επόμενο βήμα (απαιτεί απόφαση):**
+1. `vercel git connect` ώστε τα builds να γίνονται από το Vercel με το σωστό preset, **ή**
+2. αλλαγή framework preset σε *Other* + `outputDirectory` και χειροκίνητο BOA build, **ή**
+3. `vercel deploy --prod` με παλαιότερη έκδοση TanStack Start (1.167.x) που είχε δουλέψει.
+
+### 9.3 Τι άλλαξε στο repo (main @ 9b9d4e4)
+- §6.2 **ένα catalog**: `/ypiresies` → 301 → `/services` (με mapping ids→slugs).
+- §6.4 `/seminaria` στο Header nav.
+- §6.3 sitemap: + `/seminaria`, + `/as-sxoliasoume/<slug>` (από `POSTS`).
+- §6.1 `SITE.url`: env-based (`VITE_SITE_URL`), default `https://dialogou-noisis.vercel.app`
+  μέχρι να δεθεί το `dialogounoisis.gr` (το DNS δεν επιλύεται).
+- §6.6 `.env.example` + `README.md` + `.gitattributes` (LF, γιατί τα CRLF έσπαγαν το lint).
+- Αναβάθμιση `@tanstack/react-start` 1.168.50 → 1.168.60 (CVE-2026-102989 XSS block στο deploy).
+- `npm run lint`: 0 errors (6 προϋπάρχοντα warnings) · `npm run build`: OK.
+
+### 9.4 Δεν έγιναν
+- §6.5 blog dates: παραμένουν `null` (απόφαση περιεχομένου, όχι κώδικα).
+- Deploy των παραπάνω: **δεν είναι live** μέχρι να λυθεί το 9.2.
