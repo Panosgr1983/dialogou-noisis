@@ -3,7 +3,7 @@ import { SITE } from "@/lib/site";
 
 export function ContactPreview() {
   const mapsQ = encodeURIComponent(
-    `${SITE.address.street}, ${SITE.address.city} ${SITE.address.postal}`
+    `${SITE.address.street}, ${SITE.address.city} ${SITE.address.postal}`,
   );
   return (
     <section className="reveal bg-background py-24 md:py-32">
@@ -33,7 +33,12 @@ export function ContactPreview() {
                 <div className="font-semibold text-ink">Τηλέφωνα</div>
                 {SITE.phones.map((p, i) => (
                   <div key={p}>
-                    <a href={`tel:${SITE.phonesTel[i]}`} className="text-muted-foreground hover:text-primary">{p}</a>
+                    <a
+                      href={`tel:${SITE.phonesTel[i]}`}
+                      className="text-muted-foreground hover:text-primary"
+                    >
+                      {p}
+                    </a>
                   </div>
                 ))}
               </div>
@@ -46,7 +51,12 @@ export function ContactPreview() {
                 <div className="font-semibold text-ink">Email</div>
                 {SITE.emails.map((e) => (
                   <div key={e}>
-                    <a href={`mailto:${e}`} className="text-muted-foreground hover:text-primary break-all">{e}</a>
+                    <a
+                      href={`mailto:${e}`}
+                      className="text-muted-foreground hover:text-primary break-all"
+                    >
+                      {e}
+                    </a>
                   </div>
                 ))}
               </div>

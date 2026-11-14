@@ -36,8 +36,7 @@ function SeminariaPage() {
       <section
         className="relative w-full overflow-hidden py-20 text-white md:py-28"
         style={{
-          backgroundImage:
-            "linear-gradient(135deg, #6B46C1 0%, #805AD5 50%, #9F7AEA 100%)",
+          backgroundImage: "linear-gradient(135deg, #6B46C1 0%, #805AD5 50%, #9F7AEA 100%)",
         }}
       >
         <div
@@ -71,22 +70,23 @@ function SeminariaPage() {
               Εκπαιδευτικά Σεμινάρια
             </h2>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground md:text-lg">
-              Το κέντρο μας προσφέρει ένα ευρύ φάσμα εκπαιδευτικών σεμιναρίων
-              που στοχεύουν στην προσωπική και επαγγελματική ανάπτυξη. Τα
-              σεμινάρια απευθύνονται σε ιδιώτες, επαγγελματίες ψυχικής υγείας,
-              εκπαιδευτικούς, γονείς και ομάδες εργαζομένων.
+              Το κέντρο μας προσφέρει ένα ευρύ φάσμα εκπαιδευτικών σεμιναρίων που στοχεύουν στην
+              προσωπική και επαγγελματική ανάπτυξη. Τα σεμινάρια απευθύνονται σε ιδιώτες,
+              επαγγελματίες ψυχικής υγείας, εκπαιδευτικούς, γονείς και ομάδες εργαζομένων.
             </p>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
-              Όλα τα προγράμματα σχεδιάζονται με επιστημονική τεκμηρίωση,
-              βιωματικές ασκήσεις και πρακτικά εργαλεία που μπορείτε να
-              εφαρμόσετε άμεσα στη ζωή και την εργασία σας.
+              Όλα τα προγράμματα σχεδιάζονται με επιστημονική τεκμηρίωση, βιωματικές ασκήσεις και
+              πρακτικά εργαλεία που μπορείτε να εφαρμόσετε άμεσα στη ζωή και την εργασία σας.
             </p>
 
             <div className="mt-8 rounded-2xl border border-border bg-card p-6 md:p-8">
               <h3 className="font-serif text-xl text-ink">Θεματικές</h3>
               <ul className="mt-4 space-y-3">
                 {TOPICS.map((t) => (
-                  <li key={t} className="flex items-start gap-3 text-sm text-foreground md:text-base">
+                  <li
+                    key={t}
+                    className="flex items-start gap-3 text-sm text-foreground md:text-base"
+                  >
                     <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
                     <span>{t}</span>
                   </li>
@@ -98,13 +98,10 @@ function SeminariaPage() {
           {/* Δεξιά: πληροφορίες / CTA */}
           <aside className="md:sticky md:top-24 md:self-start">
             <div className="rounded-2xl border border-border bg-secondary/40 p-6 md:p-8">
-              <h3 className="font-serif text-2xl text-ink">
-                Πληροφορίες Σεμιναρίων
-              </h3>
+              <h3 className="font-serif text-2xl text-ink">Πληροφορίες Σεμιναρίων</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                Επικοινωνήστε μαζί μας για περισσότερες πληροφορίες σχετικά με
-                τα διαθέσιμα σεμινάρια, ημερομηνίες, κόστος και τρόπους
-                συμμετοχής.
+                Επικοινωνήστε μαζί μας για περισσότερες πληροφορίες σχετικά με τα διαθέσιμα
+                σεμινάρια, ημερομηνίες, κόστος και τρόπους συμμετοχής.
               </p>
 
               <div className="mt-6 space-y-3">
@@ -132,9 +129,7 @@ function SeminariaPage() {
                 <ArrowRight className="h-4 w-4" />
               </Link>
 
-              <p className="mt-4 text-xs text-muted-foreground">
-                {SITE.hours}
-              </p>
+              <p className="mt-4 text-xs text-muted-foreground">{SITE.hours}</p>
             </div>
           </aside>
         </div>

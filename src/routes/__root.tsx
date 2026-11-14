@@ -46,9 +46,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
-        <h1 className="font-serif text-xl text-ink">
-          Η σελίδα δεν φορτώθηκε
-        </h1>
+        <h1 className="font-serif text-xl text-ink">Η σελίδα δεν φορτώθηκε</h1>
         <p className="mt-2 text-sm text-muted-foreground">
           Κάτι πήγε στραβά. Δοκιμάστε ξανά ή επιστρέψτε στην αρχική.
         </p>
@@ -86,9 +84,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary_large_image" },
       { name: "theme-color", content: "#0F5F5C" },
     ],
-    links: [
-      { rel: "stylesheet", href: appCss },
-    ],
+    links: [{ rel: "stylesheet", href: appCss }],
   }),
   shellComponent: RootShell,
   component: RootComponent,
@@ -127,4 +123,3 @@ function RootComponent() {
     </QueryClientProvider>
   );
 }
-

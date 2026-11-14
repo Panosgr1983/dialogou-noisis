@@ -27,7 +27,9 @@ export function TrustPillars() {
             <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-primary/10 text-primary">
               <p.icon className="h-5 w-5" />
             </div>
-            <h3 className="mt-5 font-serif text-xl leading-snug tracking-[-0.01em] text-ink">{p.title}</h3>
+            <h3 className="mt-5 font-serif text-xl leading-snug tracking-[-0.01em] text-ink">
+              {p.title}
+            </h3>
             <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">{p.body}</p>
           </div>
         ))}

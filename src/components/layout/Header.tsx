@@ -7,7 +7,8 @@ import logo from "@/assets/logo.png";
 
 const NAV = [
   { to: "/", label: "Αρχική" },
-  { to: "/ypiresies", label: "Υπηρεσίες" },
+  { to: "/services", label: "Υπηρεσίες" },
+  { to: "/seminaria", label: "Σεμινάρια" },
   { to: "/viografiko", label: "Βιογραφικό" },
   { to: "/as-sxoliasoume", label: "Ας σχολιάσουμε" },
   { to: "/contact", label: "Επικοινωνία" },

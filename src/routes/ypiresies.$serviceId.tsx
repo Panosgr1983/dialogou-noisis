@@ -1,10 +1,32 @@
-import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { createFileRoute, Link, notFound, redirect } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight, Check, User } from "lucide-react";
 import { SITE } from "@/lib/site";
 import { SERVICES, TONE_BG, TONE_TINT, getService, type Service } from "@/lib/ypiresies-data";
 import heroBg from "@/assets/service-hero-bg.jpg";
 
+// 6.2: mapping παλιών ids → νέα slugs (ένα catalog)
+const YPIRESIES_MAP: Record<string, string> = {
+  symvouleutiki: "symvouleftiki-psychotherapeia",
+  zeugous: "symvouleftiki-zevgous",
+  goneki: "goneiki-kathodigisi",
+  epaggelmatiki: "epaggelmatiki-symvouleutiki",
+  paidiki: "paidiki-efiviki-psychologia",
+  depy: "depy",
+  "morphes-vias": "morfes-vias",
+  omadiki: "omadiki-therapeia",
+  sexoualikotita: "sexoualikotita",
+  hlikiomenoi: "ilikiomenoi-anoia",
+};
+
 export const Route = createFileRoute("/ypiresies/$serviceId")({
+  beforeLoad: ({ params }) => {
+    const slug = YPIRESIES_MAP[params.serviceId];
+    throw redirect({
+      to: slug ? "/services/$slug" : "/services",
+      params: slug ? { slug } : undefined,
+      statusCode: 301,
+    });
+  },
   loader: ({ params }) => {
     const service = getService(params.serviceId);
     if (!service) throw notFound();

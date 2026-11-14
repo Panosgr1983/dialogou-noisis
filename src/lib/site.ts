@@ -20,7 +20,10 @@ import {
 export const SITE = {
   name: "Διά… Λόγου Νόησις",
   tagline: "Κέντρο Ψυχικής Υγείας · Γαλάτσι",
-  url: "https://dialogounoisis.gr",
+  // Το dialogounoisis.gr δεν επιλύεται ακόμη (DNS). Μόλις δεθεί το domain,
+  // βάλε VITE_SITE_URL=https://dialogounoisis.gr στο Vercel — χωρίς αλλαγή κώδικα.
+  url:
+    (import.meta.env.VITE_SITE_URL as string | undefined) || "https://dialogou-noisis.vercel.app",
   address: {
     street: "Δήλου 2",
     city: "Γαλάτσι",

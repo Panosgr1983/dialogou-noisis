@@ -16,10 +16,10 @@ export function Testimonials() {
                 <Star key={i} className="h-4 w-4 fill-warm text-warm" />
               ))}
             </div>
-            <span className="font-semibold text-foreground">
-              {SITE.rating.value.toFixed(1)}
+            <span className="font-semibold text-foreground">{SITE.rating.value.toFixed(1)}</span>
+            <span>
+              · {SITE.rating.count} κριτικές · {SITE.rating.source}
             </span>
-            <span>· {SITE.rating.count} κριτικές · {SITE.rating.source}</span>
           </div>
         </div>
 
@@ -29,10 +29,7 @@ export function Testimonials() {
               key={i}
               className="relative flex flex-col rounded-2xl border border-border bg-card p-6 shadow-[0_1px_2px_rgba(14,27,26,0.04)]"
             >
-              <Quote
-                className="absolute right-5 top-5 h-6 w-6 text-primary/15"
-                aria-hidden
-              />
+              <Quote className="absolute right-5 top-5 h-6 w-6 text-primary/15" aria-hidden />
               <div className="flex gap-0.5">
                 {Array.from({ length: 5 }).map((_, i) => (
                   <Star key={i} className="h-3.5 w-3.5 fill-warm text-warm" />
@@ -41,9 +38,7 @@ export function Testimonials() {
               <blockquote className="mt-4 flex-1 text-base leading-relaxed text-foreground/85">
                 «{t.text}»
               </blockquote>
-              <figcaption className="mt-5 text-sm font-semibold text-ink">
-                {t.author}
-              </figcaption>
+              <figcaption className="mt-5 text-sm font-semibold text-ink">{t.author}</figcaption>
             </figure>
           ))}
         </div>

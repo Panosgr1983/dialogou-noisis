@@ -16,8 +16,8 @@ export function FAQSection() {
             Αυτά που μας ρωτούν πιο συχνά
           </h2>
           <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-            Δεν βρίσκετε αυτό που ψάχνετε; Καλέστε μας ή στείλτε μήνυμα — θα
-            σας απαντήσουμε εντός 24 ωρών εργάσιμων.
+            Δεν βρίσκετε αυτό που ψάχνετε; Καλέστε μας ή στείλτε μήνυμα — θα σας απαντήσουμε εντός
+            24 ωρών εργάσιμων.
           </p>
         </div>
         <Accordion type="single" collapsible className="w-full">

@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, redirect } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { SITE } from "@/lib/site";
 import { FinalCTA } from "@/components/sections/FinalCTA";
@@ -11,6 +11,10 @@ const DESCRIPTION =
   "Ολοκληρωμένες υπηρεσίες ψυχικής υγείας στο Γαλάτσι: συμβουλευτική, ψυχοθεραπεία, ζευγάρι, παιδική & εφηβική ψυχολογία, ΔΕΠΥ, γονεϊκή καθοδήγηση και άλλα.";
 
 export const Route = createFileRoute("/ypiresies/")({
+  // 6.2: ένα catalog — το /ypiresies καταργείται και 301-άει στο /services
+  beforeLoad: () => {
+    throw redirect({ to: "/services", statusCode: 301 });
+  },
   head: () => ({
     meta: [
       { title: TITLE },

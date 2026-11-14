@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 import { SERVICES, SITE } from "@/lib/site";
+import { POSTS } from "@/lib/blog";
 
 export const Route = createFileRoute("/sitemap.xml")({
   server: {
@@ -11,9 +12,15 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/services", priority: "0.9", changefreq: "monthly" },
           { path: "/viografiko", priority: "0.8", changefreq: "monthly" },
           { path: "/as-sxoliasoume", priority: "0.6", changefreq: "weekly" },
+          { path: "/seminaria", priority: "0.7", changefreq: "monthly" },
           { path: "/contact", priority: "0.9", changefreq: "monthly" },
           { path: "/privacy", priority: "0.3", changefreq: "yearly" },
           { path: "/terms", priority: "0.3", changefreq: "yearly" },
+          ...POSTS.map((p) => ({
+            path: `/as-sxoliasoume/${p.slug}`,
+            priority: "0.5",
+            changefreq: "monthly",
+          })),
           ...SERVICES.map((s) => ({
             path: `/services/${s.slug}`,
             priority: "0.7",
