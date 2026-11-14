@@ -10,7 +10,7 @@ export function Hero() {
       <img
         src={heroPortrait}
         alt="Ευδοκία Τίντζη-Σαββιδάκη — Κοινωνική Ψυχολόγος, Παιδοψυχολόγος"
-        className="absolute inset-0 -z-20 h-full w-full object-cover object-[center_top]"
+        className="absolute inset-0 -z-20 h-full w-full object-cover object-[70%_38%] sm:object-[68%_38%] md:object-[center_38%]"
         loading="eager"
       />
       {/* Dark overlay for readability */}
