@@ -49,12 +49,12 @@ export function Header() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-6 lg:flex xl:gap-8">
           {NAV.map((item) => (
             <Link
               key={item.to}
               to={item.to}
-              className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
+              className="whitespace-nowrap text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
               activeProps={{ className: "text-primary" }}
               activeOptions={{ exact: item.to === "/" }}
             >
@@ -63,13 +63,13 @@ export function Header() {
           ))}
           <Link
             to="/contact"
-            className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-all hover:bg-primary/90 hover:shadow-md"
+            className="inline-flex items-center whitespace-nowrap rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-all hover:bg-primary/90 hover:shadow-md"
           >
             Επικοινωνήστε μαζί μου
           </Link>
         </nav>
 
-        <div className="flex items-center gap-2 md:hidden">
+        <div className="flex items-center gap-2 lg:hidden">
           <a
             href={`tel:${SITE.phonesTel[0]}`}
             aria-label="Καλέστε μας"
@@ -89,7 +89,7 @@ export function Header() {
       </div>
 
       {open ? (
-        <div className="border-t border-border bg-background md:hidden">
+        <div className="border-t border-border bg-background lg:hidden">
           <nav className="mx-auto flex max-w-6xl flex-col px-4 py-3">
             {NAV.map((item) => (
               <Link

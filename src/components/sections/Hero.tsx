@@ -16,7 +16,7 @@ export function Hero() {
       {/* Dark overlay for readability */}
       <div aria-hidden className="absolute inset-0 -z-10 bg-black/45" />
 
-      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center px-6 py-24 md:px-20">
+      <div className="relative z-10 mx-auto flex min-h-screen max-w-6xl items-center px-6 py-24 md:px-20">
         <div className="fade-up flex max-w-[700px] flex-col text-white">
           <span className="inline-flex w-fit items-center gap-2 rounded-full border border-white/30 bg-white/10 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.18em] text-white backdrop-blur">
             <span className="h-1.5 w-1.5 rounded-full bg-primary" />

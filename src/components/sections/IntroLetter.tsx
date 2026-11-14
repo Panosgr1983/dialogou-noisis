@@ -15,8 +15,8 @@ export function IntroLetter({
         className={`mx-auto grid max-w-6xl gap-12 px-4 md:items-start md:px-8 ${showPhoto ? "md:grid-cols-[.92fr_1.08fr]" : "md:grid-cols-1"}`}
       >
         <div>
-          <span className="eyebrow mt-0 flex items-center gap-2">
-            <span aria-hidden className="font-serif text-2xl leading-none text-primary/40">
+          <span className="eyebrow mt-0">
+            <span aria-hidden className="mr-1.5 font-serif text-primary/45">
               «
             </span>
             Ας γνωριστούμε
