@@ -10,20 +10,22 @@ export function IntroLetter({
   showPhoto?: boolean;
 }) {
   return (
-    <section className="bg-background py-14 md:py-20">
+    <section className="bg-background py-12 md:py-16">
       <div
         className={`mx-auto grid max-w-6xl gap-12 px-4 md:items-start md:px-8 ${showPhoto ? "md:grid-cols-[.92fr_1.08fr]" : "md:grid-cols-1"}`}
       >
         <div>
-          <span aria-hidden className="block font-serif text-6xl leading-none text-primary/30">
-            «
+          <span className="eyebrow mt-0 flex items-center gap-2">
+            <span aria-hidden className="font-serif text-2xl leading-none text-primary/40">
+              «
+            </span>
+            Ας γνωριστούμε
           </span>
-          <span className="eyebrow mt-4">Ας γνωριστούμε</span>
           <h2 className="mt-3 font-serif text-3xl leading-[1.1] tracking-[-0.02em] text-ink md:text-[2.75rem]">
             Λίγα λόγια μεταξύ μας
           </h2>
 
-          <div className="mt-10 space-y-6 text-[17px] leading-[1.85] text-foreground/85">
+          <div className="mt-7 space-y-5 text-[17px] leading-[1.85] text-foreground/85">
             <p>
               Πάνε χρόνια που ασχολούμαι με τον άνθρωπο. Τον γνώρισα και τον αγάπησα σε όλες του τις
               φάσεις — τις διακυμάνσεις του, τα πολύ κάτω του, τα πολύ επάνω του, τα δύσκολα και τα

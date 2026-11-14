@@ -10,7 +10,7 @@ export function ServicesPreview() {
   return (
     <section className="reveal bg-background py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-4 md:px-8">
-        <div className="mb-14 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+        <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div className="max-w-xl">
             <span className="eyebrow">Υπηρεσίες</span>
             <h2 className="mt-3 font-serif text-3xl leading-[1.1] tracking-[-0.02em] text-ink md:text-[2.5rem]">

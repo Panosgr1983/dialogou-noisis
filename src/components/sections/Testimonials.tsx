@@ -3,9 +3,9 @@ import { TESTIMONIALS, SITE } from "@/lib/site";
 
 export function Testimonials() {
   return (
-    <section className="reveal bg-background py-14 md:py-20">
+    <section className="reveal bg-background py-12 md:py-16">
       <div className="mx-auto max-w-6xl px-4 md:px-8">
-        <div className="mb-14 max-w-2xl">
+        <div className="mb-10 max-w-2xl">
           <span className="eyebrow">Μαρτυρίες</span>
           <h2 className="mt-3 font-serif text-3xl leading-[1.1] tracking-[-0.02em] text-ink md:text-[2.5rem]">
             Τι λένε άνθρωποι που εμπιστεύτηκαν τη διαδρομή τους

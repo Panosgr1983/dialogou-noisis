@@ -8,7 +8,7 @@ import { FAQ } from "@/lib/site";
 
 export function FAQSection() {
   return (
-    <section className="reveal bg-secondary/40 py-14 md:py-20">
+    <section className="reveal bg-secondary/40 py-12 md:py-16">
       <div className="mx-auto grid max-w-6xl gap-12 px-4 md:grid-cols-[1fr_1.5fr] md:px-8">
         <div>
           <span className="eyebrow">Συχνές ερωτήσεις</span>

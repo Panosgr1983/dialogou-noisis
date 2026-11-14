@@ -6,7 +6,7 @@ export function ContactPreview() {
     `${SITE.address.street}, ${SITE.address.city} ${SITE.address.postal}`,
   );
   return (
-    <section className="reveal bg-background py-14 md:py-20">
+    <section className="reveal bg-background py-12 md:py-16">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 md:grid-cols-2 md:px-8">
         <div>
           <span className="eyebrow">Επικοινωνία</span>
