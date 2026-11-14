@@ -9,43 +9,23 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as IndexRouteImport } from './routes/index'
-import { Route as ContactRouteImport } from './routes/contact'
-import { Route as PrivacyRouteImport } from './routes/privacy'
-import { Route as SeminariaRouteImport } from './routes/seminaria'
-import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
-import { Route as TermsRouteImport } from './routes/terms'
 import { Route as ViografikoRouteImport } from './routes/viografiko'
-import { Route as AsSxoliasoumeIndexRouteImport } from './routes/as-sxoliasoume/index'
-import { Route as AsSxoliasoumeSlugRouteImport } from './routes/as-sxoliasoume/$slug'
-import { Route as ServicesIndexRouteImport } from './routes/services/index'
-import { Route as ServicesSlugRouteImport } from './routes/services/$slug'
+import { Route as TermsRouteImport } from './routes/terms'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as SeminariaRouteImport } from './routes/seminaria'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as IndexRouteImport } from './routes/index'
 import { Route as YpiresiesIndexRouteImport } from './routes/ypiresies.index'
+import { Route as ServicesIndexRouteImport } from './routes/services/index'
+import { Route as AsSxoliasoumeIndexRouteImport } from './routes/as-sxoliasoume/index'
 import { Route as YpiresiesServiceIdRouteImport } from './routes/ypiresies.$serviceId'
+import { Route as ServicesSlugRouteImport } from './routes/services/$slug'
+import { Route as AsSxoliasoumeSlugRouteImport } from './routes/as-sxoliasoume/$slug'
 
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ContactRoute = ContactRouteImport.update({
-  id: '/contact',
-  path: '/contact',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PrivacyRoute = PrivacyRouteImport.update({
-  id: '/privacy',
-  path: '/privacy',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SeminariaRoute = SeminariaRouteImport.update({
-  id: '/seminaria',
-  path: '/seminaria',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
-  id: '/sitemap.xml',
-  path: '/sitemap.xml',
+const ViografikoRoute = ViografikoRouteImport.update({
+  id: '/viografiko',
+  path: '/viografiko',
   getParentRoute: () => rootRouteImport,
 } as any)
 const TermsRoute = TermsRouteImport.update({
@@ -53,29 +33,29 @@ const TermsRoute = TermsRouteImport.update({
   path: '/terms',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ViografikoRoute = ViografikoRouteImport.update({
-  id: '/viografiko',
-  path: '/viografiko',
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
-const AsSxoliasoumeIndexRoute = AsSxoliasoumeIndexRouteImport.update({
-  id: '/as-sxoliasoume/',
-  path: '/as-sxoliasoume/',
+const SeminariaRoute = SeminariaRouteImport.update({
+  id: '/seminaria',
+  path: '/seminaria',
   getParentRoute: () => rootRouteImport,
 } as any)
-const AsSxoliasoumeSlugRoute = AsSxoliasoumeSlugRouteImport.update({
-  id: '/as-sxoliasoume/$slug',
-  path: '/as-sxoliasoume/$slug',
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ServicesIndexRoute = ServicesIndexRouteImport.update({
-  id: '/services/',
-  path: '/services/',
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ServicesSlugRoute = ServicesSlugRouteImport.update({
-  id: '/services/$slug',
-  path: '/services/$slug',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const YpiresiesIndexRoute = YpiresiesIndexRouteImport.update({
@@ -83,9 +63,29 @@ const YpiresiesIndexRoute = YpiresiesIndexRouteImport.update({
   path: '/ypiresies/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesIndexRoute = ServicesIndexRouteImport.update({
+  id: '/services/',
+  path: '/services/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AsSxoliasoumeIndexRoute = AsSxoliasoumeIndexRouteImport.update({
+  id: '/as-sxoliasoume/',
+  path: '/as-sxoliasoume/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const YpiresiesServiceIdRoute = YpiresiesServiceIdRouteImport.update({
   id: '/ypiresies/$serviceId',
   path: '/ypiresies/$serviceId',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesSlugRoute = ServicesSlugRouteImport.update({
+  id: '/services/$slug',
+  path: '/services/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AsSxoliasoumeSlugRoute = AsSxoliasoumeSlugRouteImport.update({
+  id: '/as-sxoliasoume/$slug',
+  path: '/as-sxoliasoume/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -201,39 +201,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/contact': {
-      id: '/contact'
-      path: '/contact'
-      fullPath: '/contact'
-      preLoaderRoute: typeof ContactRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/privacy': {
-      id: '/privacy'
-      path: '/privacy'
-      fullPath: '/privacy'
-      preLoaderRoute: typeof PrivacyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/seminaria': {
-      id: '/seminaria'
-      path: '/seminaria'
-      fullPath: '/seminaria'
-      preLoaderRoute: typeof SeminariaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sitemap.xml': {
-      id: '/sitemap.xml'
-      path: '/sitemap.xml'
-      fullPath: '/sitemap.xml'
-      preLoaderRoute: typeof SitemapDotxmlRouteImport
+    '/viografiko': {
+      id: '/viografiko'
+      path: '/viografiko'
+      fullPath: '/viografiko'
+      preLoaderRoute: typeof ViografikoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/terms': {
@@ -243,39 +215,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TermsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/viografiko': {
-      id: '/viografiko'
-      path: '/viografiko'
-      fullPath: '/viografiko'
-      preLoaderRoute: typeof ViografikoRouteImport
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/as-sxoliasoume/': {
-      id: '/as-sxoliasoume/'
-      path: '/as-sxoliasoume'
-      fullPath: '/as-sxoliasoume/'
-      preLoaderRoute: typeof AsSxoliasoumeIndexRouteImport
+    '/seminaria': {
+      id: '/seminaria'
+      path: '/seminaria'
+      fullPath: '/seminaria'
+      preLoaderRoute: typeof SeminariaRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/as-sxoliasoume/$slug': {
-      id: '/as-sxoliasoume/$slug'
-      path: '/as-sxoliasoume/$slug'
-      fullPath: '/as-sxoliasoume/$slug'
-      preLoaderRoute: typeof AsSxoliasoumeSlugRouteImport
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/services/': {
-      id: '/services/'
-      path: '/services'
-      fullPath: '/services/'
-      preLoaderRoute: typeof ServicesIndexRouteImport
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/services/$slug': {
-      id: '/services/$slug'
-      path: '/services/$slug'
-      fullPath: '/services/$slug'
-      preLoaderRoute: typeof ServicesSlugRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/ypiresies/': {
@@ -285,11 +257,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof YpiresiesIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services/': {
+      id: '/services/'
+      path: '/services'
+      fullPath: '/services/'
+      preLoaderRoute: typeof ServicesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/as-sxoliasoume/': {
+      id: '/as-sxoliasoume/'
+      path: '/as-sxoliasoume'
+      fullPath: '/as-sxoliasoume/'
+      preLoaderRoute: typeof AsSxoliasoumeIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/ypiresies/$serviceId': {
       id: '/ypiresies/$serviceId'
       path: '/ypiresies/$serviceId'
       fullPath: '/ypiresies/$serviceId'
       preLoaderRoute: typeof YpiresiesServiceIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/$slug': {
+      id: '/services/$slug'
+      path: '/services/$slug'
+      fullPath: '/services/$slug'
+      preLoaderRoute: typeof ServicesSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/as-sxoliasoume/$slug': {
+      id: '/as-sxoliasoume/$slug'
+      path: '/as-sxoliasoume/$slug'
+      fullPath: '/as-sxoliasoume/$slug'
+      preLoaderRoute: typeof AsSxoliasoumeSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
