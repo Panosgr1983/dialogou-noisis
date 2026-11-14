@@ -1,8 +1,10 @@
+import { Link } from "@tanstack/react-router";
+import { ArrowRight } from "lucide-react";
 import aboutPortrait from "@/assets/about-portrait.png";
 
 export function IntroLetter({ short = false }: { short?: boolean }) {
   return (
-    <section className="reveal bg-background py-24 md:py-32">
+    <section className="bg-background py-24 md:py-32">
       <div className="mx-auto grid max-w-6xl gap-12 px-4 md:grid-cols-[1.15fr_.85fr] md:items-start md:px-8">
         <div>
           <span aria-hidden className="block font-serif text-6xl leading-none text-primary/30">
@@ -85,6 +87,18 @@ export function IntroLetter({ short = false }: { short?: boolean }) {
             )}
           </div>
         </div>
+
+        {short && (
+          <div className="md:col-span-2">
+            <Link
+              to="/viografiko"
+              className="inline-flex items-center gap-2 rounded-md bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-sm transition-all hover:bg-primary/90 hover:shadow-md"
+            >
+              Δείτε το βιογραφικό μου
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        )}
 
         <div className="relative md:sticky md:top-24">
           <div className="overflow-hidden rounded-2xl bg-secondary shadow-[0_20px_60px_-24px_rgba(239,106,59,0.22)]">
