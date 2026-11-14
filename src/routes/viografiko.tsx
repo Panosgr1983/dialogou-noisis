@@ -347,7 +347,19 @@ function CredGroup({ eyebrow, items }: { eyebrow: string; items: Credential[] })
 function ViografikoPage() {
   return (
     <>
-      <section className="relative overflow-hidden bg-secondary/40">
+      <section className="relative overflow-hidden">
+        {/* Φωτογραφία φόντου πίσω από τον τίτλο */}
+        <img
+          src={portrait}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 h-full w-full object-cover object-[center_35%]"
+          loading="eager"
+        />
+        <div
+          aria-hidden
+          className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/40"
+        />
         <div className="mx-auto max-w-6xl px-4 py-16 md:px-8 md:py-24">
           <div>
             <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">
@@ -365,19 +377,6 @@ function ViografikoPage() {
 
       {/* Το βιογραφικό όπως το έγραψε η ίδια */}
       <IntroLetter />
-
-      {/* Full-width photo band */}
-      <section className="bg-background">
-        <div className="relative h-56 w-full overflow-hidden sm:h-72 md:h-96 lg:h-[28rem]">
-          <img
-            src={portrait}
-            alt="Ευδοκία Τίντζη-Σαββιδάκη"
-            className="h-full w-full object-cover object-[center_20%]"
-            loading="lazy"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent" />
-        </div>
-      </section>
 
       <section className="bg-background py-16 md:py-24">
         <div className="mx-auto max-w-4xl px-4 md:px-8">

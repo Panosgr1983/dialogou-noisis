@@ -5,7 +5,7 @@ import aboutPortrait from "@/assets/about-portrait.png";
 export function IntroLetter({ short = false }: { short?: boolean }) {
   return (
     <section className="bg-background py-24 md:py-32">
-      <div className="mx-auto grid max-w-6xl gap-12 px-4 md:grid-cols-[1.15fr_.85fr] md:items-start md:px-8">
+      <div className="mx-auto grid max-w-6xl gap-12 px-4 md:grid-cols-[.92fr_1.08fr] md:items-start md:px-8">
         <div>
           <span aria-hidden className="block font-serif text-6xl leading-none text-primary/30">
             «
@@ -100,12 +100,12 @@ export function IntroLetter({ short = false }: { short?: boolean }) {
           </div>
         )}
 
-        <div className="relative md:sticky md:top-24">
+        <div className="relative md:order-first md:sticky md:top-24">
           <div className="overflow-hidden rounded-2xl bg-secondary shadow-[0_20px_60px_-24px_rgba(239,106,59,0.22)]">
             <img
               src={aboutPortrait}
               alt="Ευδοκία Τίνζη-Σαββιδάκη"
-              className="block aspect-[4/5] w-full scale-[1.02] object-cover object-[24%_28%]"
+              className="block h-auto w-full object-contain"
               loading="lazy"
             />
           </div>
