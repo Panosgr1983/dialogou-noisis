@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Award, GraduationCap, Briefcase, BookOpen, Check } from "lucide-react";
 import { SITE } from "@/lib/site";
 import portrait from "@/assets/hero-portrait.png";
+import { IntroLetter } from "@/components/sections/IntroLetter";
 
 const TITLE = `Ευδοκία Τίντζη-Σαββιδάκη — Βιογραφικό | Ψυχολόγος Γαλάτσι`;
 const DESCRIPTION =
@@ -362,6 +363,9 @@ function ViografikoPage() {
         </div>
       </section>
 
+      {/* Το βιογραφικό όπως το έγραψε η ίδια */}
+      <IntroLetter />
+
       {/* Full-width photo band */}
       <section className="bg-background">
         <div className="relative h-56 w-full overflow-hidden sm:h-72 md:h-96 lg:h-[28rem]">
@@ -372,34 +376,6 @@ function ViografikoPage() {
             loading="lazy"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent" />
-        </div>
-      </section>
-
-      <section className="bg-secondary/40 py-16 md:py-20">
-        <div className="mx-auto max-w-4xl px-4 md:px-8">
-          <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">
-            Λίγα λόγια για εμένα
-          </span>
-          <div className="mt-6 space-y-4 text-base leading-relaxed text-foreground/85 md:text-lg">
-            <p>
-              Με πολυετή εκπαίδευση και εμπειρία στον χώρο της ψυχικής υγείας, προσφέρω
-              ολοκληρωμένες υπηρεσίες προσαρμοσμένες στις ανάγκες κάθε ατόμου, ζευγαριού ή
-              οικογένειας.
-            </p>
-            <p>
-              Η προσέγγισή μου είναι συνθετική: συνδυάζει στοιχεία από διαφορετικές θεραπευτικές
-              σχολές, με στόχο να βρω αυτό που πραγματικά λειτουργεί για κάθε άνθρωπο που έρχεται
-              απέναντί μου. Πιστεύω ότι κάθε διαδρομή είναι μοναδική και αξίζει χρόνο, σεβασμό και
-              επιστημονική σοβαρότητα.
-            </p>
-          </div>
-          <Link
-            to="/services"
-            className="mt-8 inline-flex items-center gap-2 rounded-md border border-primary/30 px-5 py-3 text-sm font-semibold text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
-          >
-            Δείτε τις υπηρεσίες
-            <ArrowRight className="h-4 w-4" />
-          </Link>
         </div>
       </section>
 

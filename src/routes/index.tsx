@@ -86,7 +86,7 @@ function Index() {
   return (
     <>
       <Hero />
-      <IntroLetter />
+      <IntroLetter short />
       <Testimonials />
       <FAQSection />
       <FinalCTA />
