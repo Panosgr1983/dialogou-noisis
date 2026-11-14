@@ -74,7 +74,7 @@ export function IntroLetter() {
             <img
               src={aboutPortrait}
               alt="Ευδοκία Τίνζη-Σαββιδάκη"
-              className="block h-auto w-full object-cover"
+              className="block aspect-[4/5] w-full scale-[1.02] object-cover object-[24%_28%]"
               loading="lazy"
             />
           </div>
