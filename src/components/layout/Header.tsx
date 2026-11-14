@@ -11,7 +11,6 @@ const NAV = [
   { to: "/seminaria", label: "Σεμινάρια" },
   { to: "/viografiko", label: "Βιογραφικό" },
   { to: "/as-sxoliasoume", label: "Ας σχολιάσουμε" },
-  { to: "/contact", label: "Επικοινωνία" },
 ] as const;
 
 export function Header() {
@@ -103,6 +102,13 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
+            <Link
+              to="/contact"
+              onClick={() => setOpen(false)}
+              className="mt-3 inline-flex items-center justify-center rounded-md bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground"
+            >
+              Επικοινωνήστε μαζί μου
+            </Link>
           </nav>
         </div>
       ) : null}
