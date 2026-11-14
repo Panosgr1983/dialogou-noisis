@@ -375,6 +375,18 @@ function ViografikoPage() {
         </div>
       </section>
 
+      {/* Μικρή φωτογραφία σε όλο το πλάτος */}
+      <section className="bg-background">
+        <div className="relative h-48 w-full overflow-hidden sm:h-56 md:h-64">
+          <img
+            src={portrait}
+            alt="Ευδοκία Τίντζη-Σαββιδάκη"
+            className="h-full w-full object-cover object-[center_30%]"
+            loading="lazy"
+          />
+        </div>
+      </section>
+
       {/* Το βιογραφικό όπως το έγραψε η ίδια */}
       <IntroLetter />
 
