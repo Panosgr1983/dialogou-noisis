@@ -47,14 +47,12 @@ export function IntroLetter({
             )}
           </div>
 
-          <div className="mt-10 rounded-r-xl border-l-2 border-primary/70 bg-secondary/60 px-6 py-7 md:px-8">
-            {!short && (
+          {!short && (
+            <div className="mt-10 rounded-r-xl border-l-2 border-primary/70 bg-secondary/60 px-6 py-7 md:px-8">
               <p className="font-serif text-xl leading-relaxed tracking-[-0.01em] text-ink md:text-2xl">
                 «Εσείς έχετε τόσα πολλά εργαλεία — κι εμείς, που θα ζητήσουμε την υποστήριξή σας,
                 είμαστε όλοι διαφορετικοί. Πώς θα βρείτε τον δικό μου τρόπο;»
               </p>
-            )}
-            {!short && (
               <p className="mt-5 text-[17px] leading-[1.85] text-foreground/85">
                 Η απάντησή μου είναι: έχουμε αρκετά εργαλεία, από πολλές προσεγγίσεις. Και εδώ
                 έρχονται η μελέτη, η πολύχρονη εμπειρία, ο σεβασμός, η κατανόηση και η εκπαίδευση
@@ -63,8 +61,8 @@ export function IntroLetter({
                 ματιά σε μια ψυχή, ώστε να προσεγγίσουμε μαζί, με αγάπη, ό,τι πονάει και έχει
                 τραυματιστεί.
               </p>
-            )}
-          </div>
+            </div>
+          )}
 
           {!short && (
             <aside className="mt-8 rounded-r-xl border-l-2 border-primary bg-primary-soft/50 px-6 py-6 md:px-8">
@@ -109,20 +107,14 @@ export function IntroLetter({
         )}
 
         {showPhoto && (
-          <div className="relative md:order-first md:sticky md:top-24">
-            <div className="overflow-hidden rounded-2xl bg-secondary shadow-[0_20px_60px_-24px_rgba(239,106,59,0.22)]">
+          <div className="md:order-first">
+            <div className="overflow-hidden rounded-2xl bg-secondary">
               <img
                 src={aboutPortrait}
                 alt="Ευδοκία Τίνζη-Σαββιδάκη"
                 className="block h-auto w-full object-contain"
                 loading="lazy"
               />
-            </div>
-            <div className="absolute -bottom-5 left-4 rounded-xl border border-border bg-card px-4 py-3 shadow-lg">
-              <div className="font-serif text-2xl leading-none text-primary">36+</div>
-              <div className="mt-1 text-[10px] uppercase tracking-[0.14em] text-muted-foreground">
-                χρόνια με τον άνθρωπο
-              </div>
             </div>
           </div>
         )}
