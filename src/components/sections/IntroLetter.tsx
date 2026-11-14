@@ -2,10 +2,18 @@ import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import aboutPortrait from "@/assets/about-portrait.png";
 
-export function IntroLetter({ short = false }: { short?: boolean }) {
+export function IntroLetter({
+  short = false,
+  showPhoto = true,
+}: {
+  short?: boolean;
+  showPhoto?: boolean;
+}) {
   return (
     <section className="bg-background py-24 md:py-32">
-      <div className="mx-auto grid max-w-6xl gap-12 px-4 md:grid-cols-[.92fr_1.08fr] md:items-start md:px-8">
+      <div
+        className={`mx-auto grid max-w-6xl gap-12 px-4 md:items-start md:px-8 ${showPhoto ? "md:grid-cols-[.92fr_1.08fr]" : "md:grid-cols-1"}`}
+      >
         <div>
           <span aria-hidden className="block font-serif text-6xl leading-none text-primary/30">
             «
@@ -100,22 +108,24 @@ export function IntroLetter({ short = false }: { short?: boolean }) {
           </div>
         )}
 
-        <div className="relative md:order-first md:sticky md:top-24">
-          <div className="overflow-hidden rounded-2xl bg-secondary shadow-[0_20px_60px_-24px_rgba(239,106,59,0.22)]">
-            <img
-              src={aboutPortrait}
-              alt="Ευδοκία Τίνζη-Σαββιδάκη"
-              className="block h-auto w-full object-contain"
-              loading="lazy"
-            />
-          </div>
-          <div className="absolute -bottom-5 left-4 rounded-xl border border-border bg-card px-4 py-3 shadow-lg">
-            <div className="font-serif text-2xl leading-none text-primary">36+</div>
-            <div className="mt-1 text-[10px] uppercase tracking-[0.14em] text-muted-foreground">
-              χρόνια με τον άνθρωπο
+        {showPhoto && (
+          <div className="relative md:order-first md:sticky md:top-24">
+            <div className="overflow-hidden rounded-2xl bg-secondary shadow-[0_20px_60px_-24px_rgba(239,106,59,0.22)]">
+              <img
+                src={aboutPortrait}
+                alt="Ευδοκία Τίνζη-Σαββιδάκη"
+                className="block h-auto w-full object-contain"
+                loading="lazy"
+              />
+            </div>
+            <div className="absolute -bottom-5 left-4 rounded-xl border border-border bg-card px-4 py-3 shadow-lg">
+              <div className="font-serif text-2xl leading-none text-primary">36+</div>
+              <div className="mt-1 text-[10px] uppercase tracking-[0.14em] text-muted-foreground">
+                χρόνια με τον άνθρωπο
+              </div>
             </div>
           </div>
-        </div>
+        )}
       </div>
     </section>
   );

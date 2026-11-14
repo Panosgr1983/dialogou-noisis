@@ -347,19 +347,7 @@ function CredGroup({ eyebrow, items }: { eyebrow: string; items: Credential[] })
 function ViografikoPage() {
   return (
     <>
-      <section className="relative overflow-hidden">
-        {/* Φωτογραφία φόντου πίσω από τον τίτλο */}
-        <img
-          src={portrait}
-          alt=""
-          aria-hidden="true"
-          className="absolute inset-0 h-full w-full object-cover object-[center_35%]"
-          loading="eager"
-        />
-        <div
-          aria-hidden
-          className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/40"
-        />
+      <section className="relative overflow-hidden bg-secondary/40">
         <div className="mx-auto max-w-6xl px-4 py-16 md:px-8 md:py-24">
           <div>
             <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">
@@ -388,7 +376,7 @@ function ViografikoPage() {
       </section>
 
       {/* Το βιογραφικό όπως το έγραψε η ίδια */}
-      <IntroLetter />
+      <IntroLetter showPhoto={false} />
 
       <section className="bg-background py-16 md:py-24">
         <div className="mx-auto max-w-4xl px-4 md:px-8">
