@@ -10,7 +10,7 @@ export function IntroLetter({
   showPhoto?: boolean;
 }) {
   return (
-    <section className="bg-background py-24 md:py-32">
+    <section className="bg-background py-14 md:py-20">
       <div
         className={`mx-auto grid max-w-6xl gap-12 px-4 md:items-start md:px-8 ${showPhoto ? "md:grid-cols-[.92fr_1.08fr]" : "md:grid-cols-1"}`}
       >
@@ -76,35 +76,36 @@ export function IntroLetter({
             </aside>
           )}
 
-          <div className="mt-12 border-t border-border/70 pt-8">
-            {!short && (
-              <>
-                <p className="text-[17px] leading-relaxed text-foreground/85">
-                  Σας ευχαριστώ όλους, από καρδιάς, που ζητήσατε να με γνωρίσετε καλύτερα.
-                </p>
-                <p className="mt-4 font-serif text-2xl tracking-[-0.02em] text-ink">
-                  Ευδοκία Τίντζη-Σαββιδάκη
-                </p>
-                <p className="mt-1 text-sm font-medium text-muted-foreground">
-                  Κοινωνική Ψυχολόγος · Παιδοψυχολόγος · Σύμβουλος Συνθετικής Συμβουλευτικής ·
-                  Επόπτρια
-                </p>
-              </>
-            )}
-          </div>
+          {!short && (
+            <div className="mt-12 border-t border-border/70 pt-8">
+              {!short && (
+                <>
+                  <p className="text-[17px] leading-relaxed text-foreground/85">
+                    Σας ευχαριστώ όλους, από καρδιάς, που ζητήσατε να με γνωρίσετε καλύτερα.
+                  </p>
+                  <p className="mt-4 font-serif text-2xl tracking-[-0.02em] text-ink">
+                    Ευδοκία Τίντζη-Σαββιδάκη
+                  </p>
+                  <p className="mt-1 text-sm font-medium text-muted-foreground">
+                    Κοινωνική Ψυχολόγος · Παιδοψυχολόγος · Σύμβουλος Συνθετικής Συμβουλευτικής ·
+                    Επόπτρια
+                  </p>
+                </>
+              )}
+            </div>
+          )}
+          {short && (
+            <div className="md:col-span-2">
+              <Link
+                to="/viografiko"
+                className="mt-8 inline-flex w-fit items-center gap-2 whitespace-nowrap rounded-md bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-sm transition-all hover:bg-primary/90 hover:shadow-md"
+              >
+                Δείτε το βιογραφικό μου
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+          )}
         </div>
-
-        {short && (
-          <div className="md:col-span-2">
-            <Link
-              to="/viografiko"
-              className="inline-flex items-center gap-2 rounded-md bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-sm transition-all hover:bg-primary/90 hover:shadow-md"
-            >
-              Δείτε το βιογραφικό μου
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-        )}
 
         {showPhoto && (
           <div className="md:order-first">

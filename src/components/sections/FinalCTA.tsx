@@ -6,7 +6,7 @@ import { useReveal } from "@/hooks/use-reveal";
 export function FinalCTA() {
   useReveal();
   return (
-    <section className="reveal bg-brand-blue py-24 text-brand-blue-foreground md:py-32">
+    <section className="reveal bg-brand-blue py-14 text-brand-blue-foreground md:py-20">
       <div className="mx-auto max-w-3xl px-4 text-center md:px-8">
         <h2 className="font-serif text-3xl leading-[1.05] tracking-[-0.02em] md:text-5xl">
           Κάντε το πρώτο βήμα για μια καλύτερη ζωή

@@ -3,7 +3,7 @@ import { TESTIMONIALS, SITE } from "@/lib/site";
 
 export function Testimonials() {
   return (
-    <section className="reveal bg-background py-24 md:py-32">
+    <section className="reveal bg-background py-14 md:py-20">
       <div className="mx-auto max-w-6xl px-4 md:px-8">
         <div className="mb-14 max-w-2xl">
           <span className="eyebrow">Μαρτυρίες</span>
